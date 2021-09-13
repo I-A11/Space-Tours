@@ -32,9 +32,30 @@ Global Styles
   padding: 0;
 }
 
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
 ul {
   list-style: none;
 }
 a {
   text-decoration: none;
+}
+
+/* Navbar */
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 4.5rem;
+  background: var(--primary-1);
+  color: var(--primary-2);
+  font-size: 2.5rem;
+}
+
+.nav-logo {
+  margin: 0 0.25rem;
+  color: var(--primary-4);
 }
