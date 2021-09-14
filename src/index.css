@@ -10,7 +10,7 @@ Variables
   --primary-3: #ff845f;
   --primary-4: #f9f871;
   --white: #fff;
-  --black: --#222;
+  --black: #222;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -50,7 +50,7 @@ a {
   justify-content: center;
   align-items: center;
   min-height: 4.5rem;
-  background: var(--primary-1);
+  background: var(--black);
   color: var(--primary-2);
   font-size: 2.5rem;
 }
@@ -58,4 +58,51 @@ a {
 .nav-logo {
   margin: 0 0.25rem;
   color: var(--primary-4);
+}
+
+/* Media Query */
+
+@media screen and (max-width: 450px) {
+  .nav-container {
+    font-size: 2rem;
+  }
+}
+
+/* Hero Section */
+
+.hero-container {
+  background-image: url("./Components/Images/hero-img.jpg");
+  min-height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.hero-container h1 {
+  margin: 6rem 0 3rem;
+  font-size: 2.5rem;
+  color: var(--primary-3);
+}
+.hero-content {
+  width: 50%;
+  font-size: 1.5rem;
+  padding: 0 0 3rem;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 450px) {
+  .hero-container h1 {
+    margin: 6rem 0 3rem;
+    font-size: 1.8rem;
+  }
+  .hero-content {
+    width: 50%;
+    font-size: 1.2rem;
+  }
 }
