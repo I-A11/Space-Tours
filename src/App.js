@@ -8,6 +8,11 @@ const url = "https://course-api.com/react-tours-project";
 function App() {
   const [tours, setTours] = useState([]);
 
+  const removeTour = (id) => {
+    const newTour = tours.filter((tour) => tour.id !== id);
+    setTours(newTour);
+  };
+
   const fetchTours = async () => {
     try {
       const response = await fetch(url);
@@ -21,11 +26,28 @@ function App() {
   useEffect(() => {
     fetchTours();
   }, []);
+
+  if (tours.length === 0) {
+    return (
+      <>
+        <Navbar />
+        <Hero />
+        <main>
+          <div className='title'>
+            <h2>No Tours Left</h2>
+            <button className='btn' onClick={fetchTours}>
+              Refresh
+            </button>
+          </div>
+        </main>
+      </>
+    );
+  }
   return (
     <>
       <Navbar />
       <Hero />
-      <Tours tours={tours} />
+      <Tours tours={tours} {...tours} removeTour={removeTour} />
     </>
   );
 }
