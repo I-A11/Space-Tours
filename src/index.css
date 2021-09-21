@@ -8,7 +8,8 @@ Variables
   --primary-1: #5b3699;
   --primary-2: #ed5278;
   --primary-3: #ff845f;
-  --primary-4: #f9f871;
+  --primary-4: #f13607;
+  --primary-5: #f5f0f0;
   --white: #fff;
   --black: #222;
   --transition: all 0.3s linear;
@@ -130,12 +131,12 @@ a {
   margin: auto;
 }
 
-.tours {
+/* .tours {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 20px;
   margin: 0 5rem 2rem;
-}
+} */
 
 .single-tour {
   display: flex;
@@ -184,4 +185,119 @@ a {
   padding: 0 0.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+/* review section */
+main {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.container {
+  width: 80vw;
+  max-width: 920px;
+}
+
+.review {
+  background: var(--white);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--dark-shadow);
+  text-align: center;
+}
+
+.review:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+.img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.person-img {
+  width: 100%;
+  display: block;
+  border-radius: 50%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+  background: var(--primary-2);
+  color: var(--white);
+}
+
+.img-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--primary-3);
+  position: absolute;
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+}
+
+.author {
+  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+  color: var(--primary-1);
+  text-transform: uppercase;
+}
+
+.job {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: var(--primary-2);
+}
+
+.review-info {
+  margin-bottom: 1rem;
+}
+
+.prev-btn,
+.next-btn {
+  color: var(--primary-3);
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: var(--primary-4);
+}
+
+.random-btn {
+  margin-top: 0.5rem;
+  background: var(--primary-5);
+  color: var(--primary-3);
+  border-color: transparent;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.random-btn:hover {
+  background: var(--primary-1);
+  color: var(--primary-4);
 }

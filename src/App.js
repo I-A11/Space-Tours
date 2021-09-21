@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Hero from "./Components/Hero/Hero";
 import Navbar from "./Components/Navbar/Navbar";
+import Review from "./Components/Reviews/Review";
 import Tours from "./Components/Tours/Tours";
 
 const url = "https://course-api.com/react-tours-project";
@@ -40,6 +41,15 @@ function App() {
             </button>
           </div>
         </main>
+        <main>
+          <div className='container'>
+            <div className='title'>
+              <h2>Our Reviews</h2>
+              <div className='underline'></div>
+            </div>
+            <Review />
+          </div>
+        </main>
       </>
     );
   }
@@ -48,6 +58,15 @@ function App() {
       <Navbar />
       <Hero />
       <Tours tours={tours} {...tours} removeTour={removeTour} />
+      <main>
+        <div className='container'>
+          <div className='title'>
+            <h2>Our Reviews</h2>
+            <div className='underline'></div>
+          </div>
+          <Review />
+        </div>
+      </main>
     </>
   );
 }
